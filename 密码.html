@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="C:\Users\xy114514\Desktop\亻尔女子\懒人.css"   rel="stylesheet"/>
+    <title>亻尔女子</title>
+</head>
+<body>
+      <p style="
+      font-size: 30px;
+      text-align: center;
+      color: #F1F1F1;">
+      homo
+    </p>
+ <div class="container">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="亻尔女子">
+            <button type="submit">go!</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+        const resultDiv = document.getElementById('result');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // 阻止表单默认提交行为
+            const inputValue = searchInput.value.trim(); // 获取输入内容并去除首尾空格
+            // 判断输入内容是否为"114514"
+            if (inputValue === '114514') {
+                resultDiv.textContent = '亻尔女子';
+                resultDiv.style.color ='#48bb78'; //绿色显示
+            } else {
+                resultDiv.textContent = '亻尔女马';
+                resultDiv.style.color ='#e53e3e'; //红色显示
+            }
+        });
+    </script>
+</body>
+</html>
